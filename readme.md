@@ -22,7 +22,7 @@ consignes
 
 		$motsW=[];
 		foreach ($dico as $key => $value) {
-				$char_list="w";
+				$char_list="w", "W";
 				if (strpbrk ($value , $char_list )==true){		
 					array_push($motsW, $value);
 					}
@@ -30,6 +30,28 @@ consignes
 		echo count($motsW);
 
  * réponse 537
+ * correction contient w
+	 	$motsW=[];
+			foreach ($dico as $key => $value) {
+					if (strpos($value , "w" )!==false){		
+						array_push($motsW, $value);
+						}
+					}
+			echo count($motsW);
+
+* combien de mots contiennent w ou W
+
+		$motsW=[];
+		foreach ($dico as $key => $value) {
+				if (strpbrk ($value , "w" )==true || strpbrk ($value , "W" )==true ){		
+					array_push($motsW, $value);
+					}
+				}
+		var_dump($mot);
+		echo count($motsW);
+
+
+ * 539
 
 * combien de mots finissent par q   
 	

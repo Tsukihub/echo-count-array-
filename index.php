@@ -12,28 +12,27 @@
 // 	array_push($mots15, $value);
 // }
 // }
-// $nombremot15 = count($mots15);
-// echo($nombremot15);
+// echo count($mots15);
 
 
 
-// $motsW=[];
-// foreach ($dico as $key => $value) {
-// 		$char_list="w";
-// 		if (strpbrk ($value , $char_list )==true){		
-// 			array_push($motsW, $value);
-// 			}
-// 		}
 
-// echo count($motsW);
-
-
-
-$motsfinq=[];
+$motsW=[];
 foreach ($dico as $key => $value) {
-	if (substr($value, -1)=="q"){
-		array_push($motsfinq, $value);
-	}
-}
-echo count($motsfinq);
+		if (strpbrk ($value , "w" )==true || strpbrk ($value , "W" )==true ){		
+			array_push($motsW, $value);
+			}
+		}
+var_dump($motsW);
+echo count($motsW);
+
+
+
+// $motsfinq=[];
+// foreach ($dico as $key => $value) {
+// 	if (substr($value, -1)=="q"){
+// 		array_push($motsfinq, $value);
+// 	}
+// }
+// echo count($motsfinq);
 ?>
